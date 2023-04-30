@@ -10,7 +10,8 @@ const ContactList = ({ children }) => {
     );
 
   const contacts = useSelector(state => state.contacts.contacts);
-  const filter = useSelector(state => state.contacts.filter);
+  // const filter = useSelector(state => state.contacts.filter);
+  const filter = useSelector(state => state.filter.filter);
   const dispatch = useDispatch();
   const contactsList = filtersContacts(contacts, filter);
 

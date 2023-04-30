@@ -26,9 +26,10 @@ const ContactForm = () => {
     if (contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase())) {
       alert(`${name} is already in contacts.`);
     } else {
-      dispatch(addContact({ id: nanoid(), name, number}));
+      dispatch(addContact({ id: nanoid(), name, number }));
+      reset();
     }
-    reset();
+   
   };
 
   const reset = () => {
